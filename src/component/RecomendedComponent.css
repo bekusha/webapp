@@ -1,0 +1,29 @@
+.recContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  position: relative;
+}
+.recInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+}
+.recYear {
+  color: white;
+  margin-right: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.point {
+  margin-left: 10px;
+}
+.recClass {
+  color: white;
+  margin-right: 19px;
+}
+.recPage {
+  color: white;
+}

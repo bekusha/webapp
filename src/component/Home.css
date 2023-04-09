@@ -1,0 +1,30 @@
+.home {
+  width: 100%;
+}
+.input {
+  margin-left: 40px;
+  margin-top: 20px;
+  display: flex;
+
+  align-items: center;
+}
+.searchIcon {
+  margin-right: 32px;
+}
+.tranding {
+  color: white;
+}
+.trandItems {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.recomended {
+  color: white;
+}
+.recomendItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
