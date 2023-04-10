@@ -10,6 +10,9 @@ body {
 
   padding: 32px;
 }
+.navs {
+  margin-top: 20px;
+}
 .navBar {
   display: flex;
   flex-direction: column;

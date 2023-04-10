@@ -24,7 +24,12 @@ const TrandingComponent = (props) => {
         <div className="componentText">PG</div>
         <h3 className="name">{props.name}</h3>
       </div>
-      <img className="bookmarkButton" src={bookmark} alt="" />
+      <img
+        onClick={props.handleLikedMovie}
+        className="bookmarkButton"
+        src={bookmark}
+        alt=""
+      />
     </div>
   );
 };
