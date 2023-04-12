@@ -1,17 +1,24 @@
 import React from "react";
-import { useState } from "react";
-const Bookmarked = (props, bookmarked) => {
-  const likedMoviesFromStorage =
-    JSON.parse(localStorage.getItem("likedMovies")) || [];
-  const [likedMovies] = useState(likedMoviesFromStorage);
-  console.log(likedMoviesFromStorage);
+import "./Bookmarked.css";
+import { useContext } from "react";
+import { AppContext } from "./test/Context";
+
+import RecomendedComponent from "./RecomendedComponent";
+const Bookmarked = () => {
+  const array = useContext(AppContext);
+
   return (
-    <div>
-      <ul>
-        {likedMovies.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
-        ))}
-      </ul>
+    <div className="contextcontainer">
+      {array.bookmarks.map((movie) => {
+        return (
+          <RecomendedComponent
+            img={movie.img}
+            name={movie.name}
+            class={movie.class}
+            year={movie.year}
+          />
+        );
+      })}
     </div>
   );
 };

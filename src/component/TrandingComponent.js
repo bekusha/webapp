@@ -1,10 +1,16 @@
 import React from "react";
-import bookmark from "../images/bookmark.png";
+import bookmarked from "../images/bookmark.png";
 import "./TrandingComponent.css";
 import point from "../images/Oval Copy 2.png";
 import movie from "../images/Shape (1).png";
-
+import { useContext } from "react";
+import { AppContext } from "./test/Context";
 const TrandingComponent = (props) => {
+  const bookmark = useContext(AppContext);
+  const handleBookmark = () => {
+    bookmark.setBookmarks([...bookmark.bookmarks, props]);
+    console.log(bookmark);
+  };
   return (
     <div className="componentInner">
       <div className="imgcontainer">
@@ -25,9 +31,9 @@ const TrandingComponent = (props) => {
         <h3 className="name">{props.name}</h3>
       </div>
       <img
-        onClick={props.handleLikedMovie}
+        onClick={handleBookmark}
         className="bookmarkButton"
-        src={bookmark}
+        src={bookmarked}
         alt=""
       />
     </div>

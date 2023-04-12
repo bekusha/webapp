@@ -27,3 +27,6 @@
 .recPage {
   color: white;
 }
+.bookmarkButton:hover {
+  cursor: pointer;
+}

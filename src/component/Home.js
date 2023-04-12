@@ -2,24 +2,14 @@ import React from "react";
 import search from "../images/search.png";
 import "./Home.css";
 import TrandingComponent from "./TrandingComponent";
-import tranding from "../images/Rectangle.png";
-import RecomendedComponent from "./RecomendedComponent";
 
-import car from "../images/car.png";
-import { useState } from "react";
-import movie1 from "../images/movie1.png";
-import movie2 from "../images/movie2.png";
+import RecomendedComponent from "./RecomendedComponent";
+import { useContext } from "react";
+
+import { AppContext } from "./test/Context";
 
 const Home = (props) => {
-  const [movies, setMovies] = useState([
-    { img: tranding, name: "Beyond Earth", class: "Movie", year: "2010" },
-    { img: movie1, name: "first", class: "Movie", year: "2010" },
-    { img: movie2, name: "second", class: "Movie", year: "2010" },
-    { img: car, name: "third", class: "Movie", year: "2010" },
-    { img: tranding, name: "Beyond Earth", class: "Movie", year: "2010" },
-    { img: tranding, name: "Beyond Earth", class: "Movie", year: "2010" },
-    { img: tranding, name: "Beyond Earth", class: "Movie", year: "2010" },
-  ]);
+  const movies = useContext(AppContext);
 
   return (
     <div className="home">
@@ -29,7 +19,7 @@ const Home = (props) => {
       </div>
       <h3 className="tranding">Tranding</h3>
       <div className="trandItems">
-        {movies.map((movie) => {
+        {movies.movies.map((movie) => {
           return (
             <TrandingComponent
               name={movie.name}
@@ -41,7 +31,7 @@ const Home = (props) => {
       </div>
       <h3 className="recomended">Recomended for you</h3>
       <div className="recomendItems">
-        {movies.map((movie) => {
+        {movies.movies.map((movie) => {
           return (
             <RecomendedComponent
               img={movie.img}

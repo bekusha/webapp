@@ -1,10 +1,11 @@
 .home {
   width: 100%;
 }
-.input {
+input {
   margin-left: 40px;
   margin-top: 20px;
   display: flex;
+  color: white;
 
   align-items: center;
 }
