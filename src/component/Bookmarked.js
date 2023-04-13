@@ -9,14 +9,22 @@ const Bookmarked = () => {
 
   return (
     <div className="contextcontainer">
-      {array.bookmarks.map((movie) => {
+      {array.bookmarks.map((movie, index) => {
         return (
-          <RecomendedComponent
-            img={movie.img}
-            name={movie.name}
-            class={movie.class}
-            year={movie.year}
-          />
+          <>
+            <RecomendedComponent
+              img={movie.img}
+              name={movie.name}
+              class={movie.class}
+              year={movie.year}
+            />
+            <button
+              onClick={() => array.handleDeleteFromBookmark(index)}
+              style={{ width: 50, height: 50 }}
+            >
+              Delete
+            </button>
+          </>
         );
       })}
     </div>

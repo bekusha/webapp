@@ -17,8 +17,23 @@ const ContextProvider = (props) => {
 
   const [bookmarks, setBookmarks] = useState([]);
 
+  const [deleteFromBookmark, setDeleteFromBookmark] = useState(bookmarks);
+  const handleDeleteFromBookmark = (index) => {
+    setBookmarks(bookmarks.filter((movie, index2) => index2 !== index));
+  };
+
   return (
-    <AppContext.Provider value={{ movies, bookmarks, setBookmarks, setMovies }}>
+    <AppContext.Provider
+      value={{
+        movies,
+        bookmarks,
+        setBookmarks,
+        setMovies,
+        deleteFromBookmark,
+        setDeleteFromBookmark,
+        handleDeleteFromBookmark,
+      }}
+    >
       {props.children}
     </AppContext.Provider>
   );
