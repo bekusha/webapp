@@ -13,7 +13,7 @@ const Home = (props) => {
 
   return (
     <div className="home">
-      <div className="input">
+      <div className="inputContainer">
         <img className="searchIcon" src={search} alt="" />
         <input type="text" placeholder="search.." />
       </div>

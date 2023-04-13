@@ -11,7 +11,7 @@ import avatar from "./images/Oval.png";
 import Login from "./component/Login";
 
 function App() {
-  const [activeMenu, setActiveMenu] = useState("series");
+  const [activeMenu, setActiveMenu] = useState("home");
 
   return (
     <div className="App">

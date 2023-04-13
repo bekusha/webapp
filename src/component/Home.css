@@ -2,15 +2,23 @@
   width: 100%;
 }
 input {
+  border: 0;
+  outline: none;
+  color: white;
+  margin-top: 40px;
+}
+.inputContainer {
   margin-left: 40px;
-  margin-top: 20px;
+
   display: flex;
   color: white;
 
   align-items: center;
 }
 .searchIcon {
-  margin-right: 32px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
 }
 .tranding {
   color: white;
