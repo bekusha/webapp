@@ -20,9 +20,15 @@ const Bookmarked = () => {
             />
             <button
               onClick={() => array.handleDeleteFromBookmark(index)}
-              style={{ width: 50, height: 50 }}
+              style={{
+                width: 10,
+                height: 10,
+                backgroundColor: "transparent",
+                color: "white",
+                border: "none",
+              }}
             >
-              Delete
+              X
             </button>
           </>
         );
