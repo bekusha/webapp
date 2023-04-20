@@ -14,31 +14,21 @@ const Movies = (props) => {
       <RecomendedComponent
         handleLike={props.shandleLike}
         img={movie1}
-        name="The Great Lands"
+        name="Undiscovered Cities"
         class="Movie"
         year={2019}
       />
-      <RecomendedComponent
-        img={movie2}
-        name="The Great Lands"
-        class="Movie"
-        year={2019}
-      />
-      <RecomendedComponent
-        img={movie3}
-        name="The Great Lands"
-        class="Movie"
-        year={2019}
-      />
+      <RecomendedComponent img={movie2} name="" class="Movie" year={2019} />
+      <RecomendedComponent img={movie3} name="1998" class="Movie" year={2019} />
       <RecomendedComponent
         img={movie4}
-        name="The Great Lands"
+        name="Bottom Gear"
         class="Movie"
         year={2019}
       />
       <RecomendedComponent
         img={movie5}
-        name="Title Movie"
+        name="The Great Lands"
         class="Movie"
         year={2019}
       />

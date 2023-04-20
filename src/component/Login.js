@@ -30,14 +30,14 @@ const Login = () => {
           </div>
         </div>
       ) : (
-        <div className="loginContainer">
+        <div style={{ height: 500 }} className="loginContainer">
           <h2 style={{ color: "white" }} className="Login">
             Login
           </h2>
           <input className="email" type="text" placeholder="Email address" />
           <input className="password" type="text" placeholder="Password" />
           <input
-            className="password"
+            className="repeatpassword"
             type="text"
             placeholder="Repeat password"
           />
